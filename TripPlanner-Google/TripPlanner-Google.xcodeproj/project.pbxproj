@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D52B0B8A1BDEB44C00E88DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0B891BDEB44C00E88DBB /* AppDelegate.swift */; };
+		D52B0B8C1BDEB44C00E88DBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0B8B1BDEB44C00E88DBB /* ViewController.swift */; };
+		D52B0B8F1BDEB44C00E88DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52B0B8D1BDEB44C00E88DBB /* Main.storyboard */; };
+		D52B0B921BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D52B0B901BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld */; };
+		D52B0B941BDEB44C00E88DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D52B0B931BDEB44C00E88DBB /* Assets.xcassets */; };
+		D52B0B971BDEB44C00E88DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52B0B951BDEB44C00E88DBB /* LaunchScreen.storyboard */; };
+		D52B0BA21BDEB44C00E88DBB /* TripPlanner_GoogleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0BA11BDEB44C00E88DBB /* TripPlanner_GoogleTests.swift */; };
+		D52B0BAD1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0BAC1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D52B0B9E1BDEB44C00E88DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D52B0B7E1BDEB44C00E88DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D52B0B851BDEB44C00E88DBB;
+			remoteInfo = "TripPlanner-Google";
+		};
+		D52B0BA91BDEB44C00E88DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D52B0B7E1BDEB44C00E88DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D52B0B851BDEB44C00E88DBB;
+			remoteInfo = "TripPlanner-Google";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D52B0B861BDEB44C00E88DBB /* TripPlanner-Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TripPlanner-Google.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D52B0B891BDEB44C00E88DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D52B0B8B1BDEB44C00E88DBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D52B0B8E1BDEB44C00E88DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D52B0B911BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripPlanner_Google.xcdatamodel; sourceTree = "<group>"; };
+		D52B0B931BDEB44C00E88DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D52B0B961BDEB44C00E88DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D52B0B981BDEB44C00E88DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D52B0B9D1BDEB44C00E88DBB /* TripPlanner-GoogleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripPlanner-GoogleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D52B0BA11BDEB44C00E88DBB /* TripPlanner_GoogleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlanner_GoogleTests.swift; sourceTree = "<group>"; };
+		D52B0BA31BDEB44C00E88DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D52B0BA81BDEB44C00E88DBB /* TripPlanner-GoogleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripPlanner-GoogleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D52B0BAC1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlanner_GoogleUITests.swift; sourceTree = "<group>"; };
+		D52B0BAE1BDEB44C00E88DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D52B0B831BDEB44C00E88DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D52B0B9A1BDEB44C00E88DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D52B0BA51BDEB44C00E88DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D52B0B7D1BDEB44C00E88DBB = {
+			isa = PBXGroup;
+			children = (
+				D52B0B881BDEB44C00E88DBB /* TripPlanner-Google */,
+				D52B0BA01BDEB44C00E88DBB /* TripPlanner-GoogleTests */,
+				D52B0BAB1BDEB44C00E88DBB /* TripPlanner-GoogleUITests */,
+				D52B0B871BDEB44C00E88DBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D52B0B871BDEB44C00E88DBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D52B0B861BDEB44C00E88DBB /* TripPlanner-Google.app */,
+				D52B0B9D1BDEB44C00E88DBB /* TripPlanner-GoogleTests.xctest */,
+				D52B0BA81BDEB44C00E88DBB /* TripPlanner-GoogleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D52B0B881BDEB44C00E88DBB /* TripPlanner-Google */ = {
+			isa = PBXGroup;
+			children = (
+				D52B0B891BDEB44C00E88DBB /* AppDelegate.swift */,
+				D52B0B8B1BDEB44C00E88DBB /* ViewController.swift */,
+				D52B0B8D1BDEB44C00E88DBB /* Main.storyboard */,
+				D52B0B931BDEB44C00E88DBB /* Assets.xcassets */,
+				D52B0B951BDEB44C00E88DBB /* LaunchScreen.storyboard */,
+				D52B0B981BDEB44C00E88DBB /* Info.plist */,
+				D52B0B901BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld */,
+			);
+			path = "TripPlanner-Google";
+			sourceTree = "<group>";
+		};
+		D52B0BA01BDEB44C00E88DBB /* TripPlanner-GoogleTests */ = {
+			isa = PBXGroup;
+			children = (
+				D52B0BA11BDEB44C00E88DBB /* TripPlanner_GoogleTests.swift */,
+				D52B0BA31BDEB44C00E88DBB /* Info.plist */,
+			);
+			path = "TripPlanner-GoogleTests";
+			sourceTree = "<group>";
+		};
+		D52B0BAB1BDEB44C00E88DBB /* TripPlanner-GoogleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D52B0BAC1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift */,
+				D52B0BAE1BDEB44C00E88DBB /* Info.plist */,
+			);
+			path = "TripPlanner-GoogleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D52B0B851BDEB44C00E88DBB /* TripPlanner-Google */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D52B0BB11BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-Google" */;
+			buildPhases = (
+				D52B0B821BDEB44C00E88DBB /* Sources */,
+				D52B0B831BDEB44C00E88DBB /* Frameworks */,
+				D52B0B841BDEB44C00E88DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TripPlanner-Google";
+			productName = "TripPlanner-Google";
+			productReference = D52B0B861BDEB44C00E88DBB /* TripPlanner-Google.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D52B0B9C1BDEB44C00E88DBB /* TripPlanner-GoogleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D52B0BB41BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-GoogleTests" */;
+			buildPhases = (
+				D52B0B991BDEB44C00E88DBB /* Sources */,
+				D52B0B9A1BDEB44C00E88DBB /* Frameworks */,
+				D52B0B9B1BDEB44C00E88DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D52B0B9F1BDEB44C00E88DBB /* PBXTargetDependency */,
+			);
+			name = "TripPlanner-GoogleTests";
+			productName = "TripPlanner-GoogleTests";
+			productReference = D52B0B9D1BDEB44C00E88DBB /* TripPlanner-GoogleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D52B0BA71BDEB44C00E88DBB /* TripPlanner-GoogleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D52B0BB71BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-GoogleUITests" */;
+			buildPhases = (
+				D52B0BA41BDEB44C00E88DBB /* Sources */,
+				D52B0BA51BDEB44C00E88DBB /* Frameworks */,
+				D52B0BA61BDEB44C00E88DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D52B0BAA1BDEB44C00E88DBB /* PBXTargetDependency */,
+			);
+			name = "TripPlanner-GoogleUITests";
+			productName = "TripPlanner-GoogleUITests";
+			productReference = D52B0BA81BDEB44C00E88DBB /* TripPlanner-GoogleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D52B0B7E1BDEB44C00E88DBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Joshua Archer";
+				TargetAttributes = {
+					D52B0B851BDEB44C00E88DBB = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					D52B0B9C1BDEB44C00E88DBB = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = D52B0B851BDEB44C00E88DBB;
+					};
+					D52B0BA71BDEB44C00E88DBB = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = D52B0B851BDEB44C00E88DBB;
+					};
+				};
+			};
+			buildConfigurationList = D52B0B811BDEB44C00E88DBB /* Build configuration list for PBXProject "TripPlanner-Google" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D52B0B7D1BDEB44C00E88DBB;
+			productRefGroup = D52B0B871BDEB44C00E88DBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D52B0B851BDEB44C00E88DBB /* TripPlanner-Google */,
+				D52B0B9C1BDEB44C00E88DBB /* TripPlanner-GoogleTests */,
+				D52B0BA71BDEB44C00E88DBB /* TripPlanner-GoogleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D52B0B841BDEB44C00E88DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D52B0B971BDEB44C00E88DBB /* LaunchScreen.storyboard in Resources */,
+				D52B0B941BDEB44C00E88DBB /* Assets.xcassets in Resources */,
+				D52B0B8F1BDEB44C00E88DBB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D52B0B9B1BDEB44C00E88DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D52B0BA61BDEB44C00E88DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D52B0B821BDEB44C00E88DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D52B0B921BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld in Sources */,
+				D52B0B8C1BDEB44C00E88DBB /* ViewController.swift in Sources */,
+				D52B0B8A1BDEB44C00E88DBB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D52B0B991BDEB44C00E88DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D52B0BA21BDEB44C00E88DBB /* TripPlanner_GoogleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D52B0BA41BDEB44C00E88DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D52B0BAD1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D52B0B9F1BDEB44C00E88DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D52B0B851BDEB44C00E88DBB /* TripPlanner-Google */;
+			targetProxy = D52B0B9E1BDEB44C00E88DBB /* PBXContainerItemProxy */;
+		};
+		D52B0BAA1BDEB44C00E88DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D52B0B851BDEB44C00E88DBB /* TripPlanner-Google */;
+			targetProxy = D52B0BA91BDEB44C00E88DBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D52B0B8D1BDEB44C00E88DBB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D52B0B8E1BDEB44C00E88DBB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D52B0B951BDEB44C00E88DBB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D52B0B961BDEB44C00E88DBB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D52B0BAF1BDEB44C00E88DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D52B0BB01BDEB44C00E88DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D52B0BB21BDEB44C00E88DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TripPlanner-Google/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Scope.TripPlanner-Google";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D52B0BB31BDEB44C00E88DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TripPlanner-Google/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Scope.TripPlanner-Google";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D52B0BB51BDEB44C00E88DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TripPlanner-GoogleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Scope.TripPlanner-GoogleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner-Google.app/TripPlanner-Google";
+			};
+			name = Debug;
+		};
+		D52B0BB61BDEB44C00E88DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TripPlanner-GoogleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Scope.TripPlanner-GoogleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner-Google.app/TripPlanner-Google";
+			};
+			name = Release;
+		};
+		D52B0BB81BDEB44C00E88DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TripPlanner-GoogleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Scope.TripPlanner-GoogleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "TripPlanner-Google";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D52B0BB91BDEB44C00E88DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TripPlanner-GoogleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Scope.TripPlanner-GoogleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "TripPlanner-Google";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D52B0B811BDEB44C00E88DBB /* Build configuration list for PBXProject "TripPlanner-Google" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D52B0BAF1BDEB44C00E88DBB /* Debug */,
+				D52B0BB01BDEB44C00E88DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D52B0BB11BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-Google" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D52B0BB21BDEB44C00E88DBB /* Debug */,
+				D52B0BB31BDEB44C00E88DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D52B0BB41BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-GoogleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D52B0BB51BDEB44C00E88DBB /* Debug */,
+				D52B0BB61BDEB44C00E88DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D52B0BB71BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-GoogleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D52B0BB81BDEB44C00E88DBB /* Debug */,
+				D52B0BB91BDEB44C00E88DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D52B0B901BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D52B0B911BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodel */,
+			);
+			currentVersion = D52B0B911BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodel */;
+			path = TripPlanner_Google.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D52B0B7E1BDEB44C00E88DBB /* Project object */;
+}
