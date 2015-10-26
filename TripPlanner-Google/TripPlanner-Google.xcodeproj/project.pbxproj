@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D52B0B8A1BDEB44C00E88DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0B891BDEB44C00E88DBB /* AppDelegate.swift */; };
-		D52B0B8C1BDEB44C00E88DBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0B8B1BDEB44C00E88DBB /* ViewController.swift */; };
 		D52B0B8F1BDEB44C00E88DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52B0B8D1BDEB44C00E88DBB /* Main.storyboard */; };
 		D52B0B921BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D52B0B901BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld */; };
 		D52B0B941BDEB44C00E88DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D52B0B931BDEB44C00E88DBB /* Assets.xcassets */; };
 		D52B0B971BDEB44C00E88DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52B0B951BDEB44C00E88DBB /* LaunchScreen.storyboard */; };
 		D52B0BA21BDEB44C00E88DBB /* TripPlanner_GoogleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0BA11BDEB44C00E88DBB /* TripPlanner_GoogleTests.swift */; };
 		D52B0BAD1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0BAC1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift */; };
+		D577514B1BDEB7BA007CE79E /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577514A1BDEB7BA007CE79E /* TripListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D577514E1BDEBB76007CE79E /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577514D1BDEBB76007CE79E /* AddTripViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D57751501BDEBC13007CE79E /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577514F1BDEBC13007CE79E /* TripDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* Begin PBXFileReference section */
 		D52B0B861BDEB44C00E88DBB /* TripPlanner-Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TripPlanner-Google.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52B0B891BDEB44C00E88DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D52B0B8B1BDEB44C00E88DBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D52B0B8E1BDEB44C00E88DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D52B0B911BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripPlanner_Google.xcdatamodel; sourceTree = "<group>"; };
 		D52B0B931BDEB44C00E88DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		D52B0BA81BDEB44C00E88DBB /* TripPlanner-GoogleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripPlanner-GoogleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52B0BAC1BDEB44C00E88DBB /* TripPlanner_GoogleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlanner_GoogleUITests.swift; sourceTree = "<group>"; };
 		D52B0BAE1BDEB44C00E88DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D577514A1BDEB7BA007CE79E /* TripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
+		D577514D1BDEBB76007CE79E /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		D577514F1BDEBC13007CE79E /* TripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		D52B0B7D1BDEB44C00E88DBB = {
 			isa = PBXGroup;
 			children = (
+				D57751461BDEB703007CE79E /* Frameworks */,
 				D52B0B881BDEB44C00E88DBB /* TripPlanner-Google */,
 				D52B0BA01BDEB44C00E88DBB /* TripPlanner-GoogleTests */,
 				D52B0BAB1BDEB44C00E88DBB /* TripPlanner-GoogleUITests */,
@@ -100,10 +105,12 @@
 			isa = PBXGroup;
 			children = (
 				D52B0B891BDEB44C00E88DBB /* AppDelegate.swift */,
-				D52B0B8B1BDEB44C00E88DBB /* ViewController.swift */,
+				D57751471BDEB703007CE79E /* Model */,
+				D57751491BDEB703007CE79E /* Views */,
+				D57751481BDEB703007CE79E /* ViewControllers */,
 				D52B0B8D1BDEB44C00E88DBB /* Main.storyboard */,
-				D52B0B931BDEB44C00E88DBB /* Assets.xcassets */,
 				D52B0B951BDEB44C00E88DBB /* LaunchScreen.storyboard */,
+				D52B0B931BDEB44C00E88DBB /* Assets.xcassets */,
 				D52B0B981BDEB44C00E88DBB /* Info.plist */,
 				D52B0B901BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld */,
 			);
@@ -126,6 +133,38 @@
 				D52B0BAE1BDEB44C00E88DBB /* Info.plist */,
 			);
 			path = "TripPlanner-GoogleUITests";
+			sourceTree = "<group>";
+		};
+		D57751461BDEB703007CE79E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			path = "TripPlanner-Google/Frameworks";
+			sourceTree = "<group>";
+		};
+		D57751471BDEB703007CE79E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D57751481BDEB703007CE79E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D577514A1BDEB7BA007CE79E /* TripListViewController.swift */,
+				D577514D1BDEBB76007CE79E /* AddTripViewController.swift */,
+				D577514F1BDEBC13007CE79E /* TripDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D57751491BDEB703007CE79E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57751501BDEBC13007CE79E /* TripDetailViewController.swift in Sources */,
+				D577514B1BDEB7BA007CE79E /* TripListViewController.swift in Sources */,
+				D577514E1BDEBB76007CE79E /* AddTripViewController.swift in Sources */,
 				D52B0B921BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld in Sources */,
-				D52B0B8C1BDEB44C00E88DBB /* ViewController.swift in Sources */,
 				D52B0B8A1BDEB44C00E88DBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +526,7 @@
 				D52B0BB31BDEB44C00E88DBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D52B0BB41BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-GoogleTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +535,7 @@
 				D52B0BB61BDEB44C00E88DBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D52B0BB71BDEB44C00E88DBB /* Build configuration list for PBXNativeTarget "TripPlanner-GoogleUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +544,7 @@
 				D52B0BB91BDEB44C00E88DBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s04-ME-bHs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Trips-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TripListViewController" customModule="TripPlanner_Google" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,130 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-Ya-04R">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="tripNameCell" textLabel="kl7-lY-xlh" style="IBUITableViewCellStyleDefault" id="FaS-Kc-kWV">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FaS-Kc-kWV" id="s9N-hi-8V3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kl7-lY-xlh">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ocK-C7-1rK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ygW-S9-rVk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hz6-Ya-04R" secondAttribute="bottom" id="20O-Aa-LDC"/>
+                            <constraint firstItem="Hz6-Ya-04R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2hn-Lt-op4"/>
+                            <constraint firstItem="Hz6-Ya-04R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="796-7t-Qp2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hz6-Ya-04R" secondAttribute="trailing" constant="-20" id="jdg-Ux-J5a"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Trips" id="0eu-eV-r4f">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0ZS-VU-CVu">
+                            <connections>
+                                <segue destination="wr9-Kg-sv4" kind="show" identifier="addTrip" id="26P-8c-dmf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Hz6-Ya-04R" id="QwR-oV-8ln"/>
+                        <segue destination="sH8-YQ-878" kind="show" identifier="showTripDetail" id="0ui-yu-g4x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1241" y="429"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="RRl-Oh-L2G">
+            <objects>
+                <viewController id="sH8-YQ-878" customClass="TripDetailViewController" customModule="TripPlanner_Google" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fgB-kg-uYG"/>
+                        <viewControllerLayoutGuide type="bottom" id="VSL-n7-gNY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oFg-Yh-J85">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="OLP-ye-xTR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5af-c0-CAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="1194"/>
+        </scene>
+        <!--Add Trip-->
+        <scene sceneID="y60-r7-dlB">
+            <objects>
+                <viewController id="wr9-Kg-sv4" customClass="AddTripViewController" customModule="TripPlanner_Google" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9aD-gk-qoO"/>
+                        <viewControllerLayoutGuide type="bottom" id="4nM-pt-Gn0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6cf-Vk-u2W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Trip" id="reB-T3-yf0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="58U-p4-eys">
+                            <connections>
+                                <segue destination="d2I-KJ-dOV" kind="unwind" unwindAction="unwindToSegue:" id="oSt-hv-TKE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="E1i-h3-zEQ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgR-Fy-9ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="d2I-KJ-dOV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2014" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sqc-44-pn9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s04-ME-bHs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vyC-QK-dSy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KoK-Py-paM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMk-qw-gnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="429"/>
         </scene>
     </scenes>
 </document>
