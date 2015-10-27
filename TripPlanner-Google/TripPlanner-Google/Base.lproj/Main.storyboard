@@ -85,10 +85,50 @@
                     <view key="view" contentMode="scaleToFill" id="oFg-Yh-J85">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have added any waypoints yet!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-Qr-Iz1">
+                                <rect key="frame" x="166" y="289" width="268" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-ZJ-0Ff">
+                                <rect key="frame" x="237" y="360" width="126" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Let's get started :)"/>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9P-9S-nxh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="KHo-s0-EWT" kind="embed" identifier="showTripDetails" id="aSL-Ns-JBk"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L9P-9S-nxh" firstAttribute="top" secondItem="oFg-Yh-J85" secondAttribute="top" id="5KA-54-BD8"/>
+                            <constraint firstAttribute="trailing" secondItem="L9P-9S-nxh" secondAttribute="trailing" id="CT9-hM-zTa"/>
+                            <constraint firstItem="xoa-ZJ-0Ff" firstAttribute="top" secondItem="Qqg-Qr-Iz1" secondAttribute="bottom" constant="50" id="GtG-V8-lZx"/>
+                            <constraint firstItem="xoa-ZJ-0Ff" firstAttribute="centerY" secondItem="oFg-Yh-J85" secondAttribute="centerY" id="IjM-Dh-A1P"/>
+                            <constraint firstItem="xoa-ZJ-0Ff" firstAttribute="centerX" secondItem="oFg-Yh-J85" secondAttribute="centerX" id="Vgg-VS-HQY"/>
+                            <constraint firstItem="Qqg-Qr-Iz1" firstAttribute="centerY" secondItem="oFg-Yh-J85" secondAttribute="centerY" id="Z0X-1b-qPx"/>
+                            <constraint firstItem="L9P-9S-nxh" firstAttribute="leading" secondItem="oFg-Yh-J85" secondAttribute="leading" id="aMX-ch-wIh"/>
+                            <constraint firstItem="VSL-n7-gNY" firstAttribute="top" secondItem="L9P-9S-nxh" secondAttribute="bottom" id="lwt-uR-0Q2"/>
+                            <constraint firstItem="Qqg-Qr-Iz1" firstAttribute="centerX" secondItem="oFg-Yh-J85" secondAttribute="centerX" id="qbE-Tw-PFA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IjM-Dh-A1P"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="OLP-ye-xTR"/>
+                    <connections>
+                        <outlet property="tripDetailContainer" destination="L9P-9S-nxh" id="t4d-zM-CjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5af-c0-CAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,5 +181,69 @@
             </objects>
             <point key="canvasLocation" x="368" y="429"/>
         </scene>
+        <!--Container Trip Detail View Controller-->
+        <scene sceneID="llf-Xu-q7A">
+            <objects>
+                <viewController id="KHo-s0-EWT" customClass="ContainerTripDetailViewController" customModule="TripPlanner_Google" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2O7-A1-2hH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RoundPictureButton" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-bk-Qfi">
+                                <rect key="frame" x="20" y="80" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1f7-E5-11K"/>
+                                    <constraint firstAttribute="width" constant="100" id="fUL-hM-qdL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXZ-h2-xVG">
+                                <rect key="frame" x="130" y="119.5" width="430" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SUZ-UP-OQQ">
+                                <rect key="frame" x="0.0" y="190" width="600" height="410"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fec-AB-Iii">
+                                <rect key="frame" x="254" y="150" width="93" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add waypoint"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fec-AB-Iii" firstAttribute="centerX" secondItem="2O7-A1-2hH" secondAttribute="centerX" id="DKg-Xq-NkF"/>
+                            <constraint firstItem="SUZ-UP-OQQ" firstAttribute="bottom" secondItem="2O7-A1-2hH" secondAttribute="bottomMargin" id="Ea5-MT-zVj"/>
+                            <constraint firstItem="SUZ-UP-OQQ" firstAttribute="leading" secondItem="2O7-A1-2hH" secondAttribute="leadingMargin" constant="-20" id="ImU-4n-7xH"/>
+                            <constraint firstItem="Xaf-bk-Qfi" firstAttribute="top" secondItem="2O7-A1-2hH" secondAttribute="topMargin" constant="80" id="Rn5-xZ-Uo7"/>
+                            <constraint firstItem="fec-AB-Iii" firstAttribute="top" secondItem="XXZ-h2-xVG" secondAttribute="bottom" constant="10" id="SKk-Qy-q0f"/>
+                            <constraint firstItem="SUZ-UP-OQQ" firstAttribute="top" secondItem="fec-AB-Iii" secondAttribute="bottom" constant="10" id="UMC-Jq-5XN"/>
+                            <constraint firstItem="Xaf-bk-Qfi" firstAttribute="leading" secondItem="2O7-A1-2hH" secondAttribute="leadingMargin" id="dG2-k8-WSJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SUZ-UP-OQQ" secondAttribute="trailing" constant="-20" id="k0w-ZN-5tC"/>
+                            <constraint firstItem="XXZ-h2-xVG" firstAttribute="centerY" secondItem="Xaf-bk-Qfi" secondAttribute="centerY" id="kbx-PU-juV"/>
+                            <constraint firstItem="XXZ-h2-xVG" firstAttribute="leading" secondItem="Xaf-bk-Qfi" secondAttribute="trailing" constant="10" id="oG0-Hg-8u7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XXZ-h2-xVG" secondAttribute="trailing" constant="20" id="rSw-Jo-7Wp"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="SUZ-UP-OQQ" id="mcg-ca-xZr"/>
+                        <outlet property="tripDestinationLabel" destination="XXZ-h2-xVG" id="wjl-ca-zg7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtK-Yv-c9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="1926"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="RoundPictureButton" width="77" height="77"/>
+    </resources>
 </document>

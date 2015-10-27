@@ -17,6 +17,7 @@
 		D577514B1BDEB7BA007CE79E /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577514A1BDEB7BA007CE79E /* TripListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D577514E1BDEBB76007CE79E /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577514D1BDEBB76007CE79E /* AddTripViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D57751501BDEBC13007CE79E /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577514F1BDEBC13007CE79E /* TripDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D5886B6B1BDFF159007AEDC1 /* ContainerTripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5886B6A1BDFF159007AEDC1 /* ContainerTripDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D577514A1BDEB7BA007CE79E /* TripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
 		D577514D1BDEBB76007CE79E /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		D577514F1BDEBC13007CE79E /* TripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		D5886B6A1BDFF159007AEDC1 /* ContainerTripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTripDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				D577514A1BDEB7BA007CE79E /* TripListViewController.swift */,
 				D577514D1BDEBB76007CE79E /* AddTripViewController.swift */,
 				D577514F1BDEBC13007CE79E /* TripDetailViewController.swift */,
+				D5886B6A1BDFF159007AEDC1 /* ContainerTripDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				D57751501BDEBC13007CE79E /* TripDetailViewController.swift in Sources */,
 				D577514B1BDEB7BA007CE79E /* TripListViewController.swift in Sources */,
+				D5886B6B1BDFF159007AEDC1 /* ContainerTripDetailViewController.swift in Sources */,
 				D577514E1BDEBB76007CE79E /* AddTripViewController.swift in Sources */,
 				D52B0B921BDEB44C00E88DBB /* TripPlanner_Google.xcdatamodeld in Sources */,
 				D52B0B8A1BDEB44C00E88DBB /* AppDelegate.swift in Sources */,

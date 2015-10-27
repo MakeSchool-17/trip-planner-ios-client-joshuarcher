@@ -1,27 +1,23 @@
 //
-//  TripDetailViewController.swift
+//  ContainerTripDetailViewController.swift
 //  TripPlanner-Google
 //
-//  Created by Joshua Archer on 10/26/15.
+//  Created by Joshua Archer on 10/27/15.
 //  Copyright © 2015 Joshua Archer. All rights reserved.
 //
 
 import UIKit
 
-class TripDetailViewController: UIViewController {
+class ContainerTripDetailViewController: UIViewController {
     
-    var tripName: String?
-    @IBOutlet weak var tripDetailContainer: UIView!
+    var tripDestination: String?
+    @IBOutlet weak var tripDestinationLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    // MARK: - View Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = tripName
-        if tripName == "san francisco" {
-            tripDetailContainer.hidden = true
-        } else {
-            
+        if let tripDestination = tripDestination {
+            tripDestinationLabel.text = "Destination: \(tripDestination)"
         }
 
         // Do any additional setup after loading the view.
@@ -32,17 +28,15 @@ class TripDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let segueName = segue.identifier
-        if segueName == "showTripDetails" {
-            let tripVc: ContainerTripDetailViewController = segue.destinationViewController as! ContainerTripDetailViewController
-            tripVc.tripDestination = self.tripName
-        }
     }
+    */
 
 }
