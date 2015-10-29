@@ -10,6 +10,8 @@ import UIKit
 
 class AddTripViewController: UIViewController {
     
+    @IBOutlet weak var tripNameTextField: UITextField!
+    
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
@@ -23,6 +25,17 @@ class AddTripViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveButtonPressed(sender: AnyObject) {
+        if tripNameTextField.text?.characters.count != 0 {
+            let nameOfTrip = tripNameTextField.text
+            CoreDataHelper.singleInstance.addTrip(nameOfTrip)
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            let alert = UIAlertController(title: "Sorry!", message: "Please enter a trip name before saving :)", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Thanks!", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
 
     /*
     // MARK: - Navigation

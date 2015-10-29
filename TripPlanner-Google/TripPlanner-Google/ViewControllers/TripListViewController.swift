@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class TripListViewController: UIViewController {
     
-    let dummyTripNames = ["san francisco", "yosemite", "los angeles", "zion national park"]
+    var trips: [Trip] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,8 +19,12 @@ class TripListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.trips = CoreDataHelper.singleInstance.getTrips()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +50,9 @@ class TripListViewController: UIViewController {
         
         if segue.identifier == "showTripDetail" {
             if let nextVc: TripDetailViewController = segue.destinationViewController as? TripDetailViewController {
-                let cellTripName: String = sender as? String ?? ""
-                nextVc.tripName = cellTripName
+                if let trip = sender as! Trip? {
+                    nextVc.trip = trip
+                }
             }
         }
     }
@@ -59,12 +65,12 @@ class TripListViewController: UIViewController {
 extension TripListViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyTripNames.count
+        return trips.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("tripNameCell") as UITableViewCell!
-        cell.textLabel?.text = dummyTripNames[indexPath.row]
+        let cell: TripListTableViewCell = tableView.dequeueReusableCellWithIdentifier("tripCell") as! TripListTableViewCell
+        cell.trip = trips[indexPath.row]
         return cell
     }
     
@@ -74,7 +80,7 @@ extension TripListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // present trip detail and send trip name
-        self.performSegueWithIdentifier("showTripDetail", sender: tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)
+        self.performSegueWithIdentifier("showTripDetail", sender: trips[indexPath.row])
     }
     
 }

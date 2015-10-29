@@ -11,13 +11,14 @@ import UIKit
 class TripDetailViewController: UIViewController {
     
     var tripName: String?
+    var trip: Trip?
     @IBOutlet weak var tripDetailContainer: UIView!
     
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = tripName
+        self.navigationItem.title = trip?.locationName
         if tripName == "san francisco" {
             tripDetailContainer.hidden = true
         } else {
@@ -42,6 +43,7 @@ class TripDetailViewController: UIViewController {
         if segueName == "showTripDetails" {
             let tripVc: ContainerTripDetailViewController = segue.destinationViewController as! ContainerTripDetailViewController
             tripVc.tripDestination = self.tripName
+            tripVc.trip = self.trip
         }
     }
 

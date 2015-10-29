@@ -5,9 +5,11 @@
 //  Created by Joshua Archer on 10/26/15.
 //  Copyright © 2015 Joshua Archer. All rights reserved.
 //
+//  Google API Key : AIzaSyBEkxUn7uWrJHScyXAD55xUuz6p49HGmCQ
 
 import UIKit
 import CoreData
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyBEkxUn7uWrJHScyXAD55xUuz6p49HGmCQ")
+        
         return true
     }
 
@@ -41,8 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        //self.saveContext()
     }
+    
+/*
 
     // MARK: - Core Data stack
 
@@ -106,6 +112,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+
+*/
 
 }
 
