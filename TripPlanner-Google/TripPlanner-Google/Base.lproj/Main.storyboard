@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s04-ME-bHs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s04-ME-bHs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -353,22 +353,65 @@
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <animations/>
                             </mapView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oPR-tX-aL3">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MAS-Oc-5XK">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gkD-fV-3th"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ix2-Uv-Wo9" id="5HL-8Y-0zm"/>
+                                </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kgm-Gv-Zyo">
+                                <rect key="frame" x="0.0" y="108" width="600" height="150"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Wjv-9x-9fH"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="placeCell" textLabel="Cmx-Pb-TDa" style="IBUITableViewCellStyleDefault" id="0Zi-jk-Gym">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Zi-jk-Gym" id="IK7-Us-wy7">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cmx-Pb-TDa">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ix2-Uv-Wo9" id="8zt-2Y-Fui"/>
+                                    <outlet property="delegate" destination="Ix2-Uv-Wo9" id="PdP-Vj-9oE"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oPR-tX-aL3" firstAttribute="leading" secondItem="2D2-Rg-W1k" secondAttribute="leadingMargin" constant="-20" id="GsA-y3-aJg"/>
-                            <constraint firstItem="AhD-Va-6fw" firstAttribute="top" secondItem="oPR-tX-aL3" secondAttribute="bottom" id="H6S-Wn-QEX"/>
-                            <constraint firstItem="oPR-tX-aL3" firstAttribute="top" secondItem="O9s-jW-NHD" secondAttribute="bottom" id="IUP-2v-8fA"/>
+                            <constraint firstItem="Kgm-Gv-Zyo" firstAttribute="leading" secondItem="2D2-Rg-W1k" secondAttribute="leadingMargin" constant="-20" id="33p-wz-sD4"/>
+                            <constraint firstItem="MAS-Oc-5XK" firstAttribute="leading" secondItem="2D2-Rg-W1k" secondAttribute="leadingMargin" constant="-20" id="SbX-I1-FJE"/>
                             <constraint firstItem="AhD-Va-6fw" firstAttribute="leading" secondItem="2D2-Rg-W1k" secondAttribute="leadingMargin" constant="-20" id="ZLE-qD-GBe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kgm-Gv-Zyo" secondAttribute="trailing" constant="-20" id="egn-1H-T84"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MAS-Oc-5XK" secondAttribute="trailing" constant="-20" id="f5i-gr-1Ne"/>
+                            <constraint firstItem="AhD-Va-6fw" firstAttribute="top" secondItem="MAS-Oc-5XK" secondAttribute="bottom" id="g2b-pk-wF6"/>
                             <constraint firstItem="YYr-jX-aRn" firstAttribute="top" secondItem="AhD-Va-6fw" secondAttribute="bottom" id="gbu-7v-0lJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oPR-tX-aL3" secondAttribute="trailing" constant="-20" id="onr-PS-pIa"/>
+                            <constraint firstItem="MAS-Oc-5XK" firstAttribute="top" secondItem="O9s-jW-NHD" secondAttribute="bottom" id="o6c-5k-GK5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AhD-Va-6fw" secondAttribute="trailing" constant="-20" id="rx5-VN-YCh"/>
+                            <constraint firstItem="Kgm-Gv-Zyo" firstAttribute="top" secondItem="MAS-Oc-5XK" secondAttribute="bottom" id="xx5-Zc-se8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Waypoint" id="IPT-C7-Qmw">
@@ -377,22 +420,20 @@
                                 <segue destination="5Kj-4Q-BwW" kind="unwind" unwindAction="unwindSegue:" id="jYd-7i-KQQ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BW0-DR-qY2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BW0-DR-qY2">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Ix2-Uv-Wo9" id="rXh-ue-Zgj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="chA-nU-U7f" id="O5u-vA-EpK"/>
+                        <outlet property="mapView" destination="AhD-Va-6fw" id="QNa-b6-kw1"/>
+                        <outlet property="waypointSearchBar" destination="MAS-Oc-5XK" id="9gP-HI-h1c"/>
+                        <outlet property="waypointSearchTableView" destination="Kgm-Gv-Zyo" id="iva-96-rAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZW-n2-9Ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5Kj-4Q-BwW" userLabel="Exit" sceneMemberID="exit"/>
-                <searchDisplayController id="chA-nU-U7f">
-                    <connections>
-                        <outlet property="delegate" destination="Ix2-Uv-Wo9" id="0k1-30-eeW"/>
-                        <outlet property="searchContentsController" destination="Ix2-Uv-Wo9" id="z5Z-3y-VgC"/>
-                        <outlet property="searchResultsDataSource" destination="Ix2-Uv-Wo9" id="PCi-qC-AKg"/>
-                        <outlet property="searchResultsDelegate" destination="Ix2-Uv-Wo9" id="eyH-kl-AAt"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2056" y="1194"/>
         </scene>

@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //self.saveContext()
     }
     
-/*
+/*  This was moved to the CoreDataStack.swift file, not sure if everything's settled yet so I left it 10/29
 
     // MARK: - Core Data stack
 

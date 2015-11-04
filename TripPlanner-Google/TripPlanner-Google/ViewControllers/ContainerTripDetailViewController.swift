@@ -12,6 +12,7 @@ class ContainerTripDetailViewController: UIViewController {
     
     let waypoints = ["bush street", "market street", "embarcadero", "south park", "daly city"]
     
+    var CDWaypoints = [Waypoint]()
     var trip: Trip?
     var tripDestination: String?
     @IBOutlet weak var tripDestinationLabel: UILabel!
@@ -23,9 +24,18 @@ class ContainerTripDetailViewController: UIViewController {
         super.viewDidLoad()
         if let trip = trip {
             tripDestinationLabel.text = "Destination: \(trip.locationName!)"
+            self.CDWaypoints = CoreDataHelper.singleInstance.getWaypointsGivenTrip(trip)
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if let trip = trip {
+            self.CDWaypoints = CoreDataHelper.singleInstance.getWaypointsGivenTrip(trip)
+            tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,8 +59,14 @@ class ContainerTripDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "toExistingWaypoint" {
             if let nextVc: ExistingWapointViewController = segue.destinationViewController as? ExistingWapointViewController {
-                let cellWaypointName: String = sender as? String ?? ""
-                nextVc.waypointName = cellWaypointName
+                let cellWaypoint = sender as? Waypoint ?? nil
+                nextVc.waypoint = cellWaypoint
+            }
+        }
+        
+        if segue.identifier == "toNewWaypoint" {
+            if let nextVc: NewWaypointViewController = segue.destinationViewController as? NewWaypointViewController {
+                nextVc.trip = self.trip
             }
         }
 
@@ -63,12 +79,12 @@ class ContainerTripDetailViewController: UIViewController {
 extension ContainerTripDetailViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return waypoints.count
+        return CDWaypoints.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tripDetailCell") as UITableViewCell!
-        cell.textLabel?.text = waypoints[indexPath.row]
+        cell.textLabel?.text = CDWaypoints[indexPath.row].name
         return cell
     }
     
@@ -76,7 +92,7 @@ extension ContainerTripDetailViewController: UITableViewDataSource {
 
 extension ContainerTripDetailViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("toExistingWaypoint", sender: tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)
+        self.performSegueWithIdentifier("toExistingWaypoint", sender: CDWaypoints[indexPath.row])
     }
 }
 

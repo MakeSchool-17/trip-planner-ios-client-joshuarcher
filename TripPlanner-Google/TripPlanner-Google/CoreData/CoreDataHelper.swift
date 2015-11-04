@@ -68,7 +68,18 @@ class CoreDataHelper {
     func getWaypointsGivenTrip(trip: Trip) -> [Waypoint] {
         let fetchRequest = NSFetchRequest(entityName: "Waypoint")
         
-        return []
+        let predicate = NSPredicate(format: "%K == %@", "parentTrip", trip)
+        fetchRequest.predicate = predicate
+        
+        var results = [Waypoint]()
+        
+        do {
+            results = try moc.executeFetchRequest(fetchRequest) as! [Waypoint]
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+        return results
     }
     
     

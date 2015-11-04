@@ -11,13 +11,18 @@ import UIKit
 class ExistingWapointViewController: UIViewController {
     
     var waypointName: String?
+    var waypoint: Waypoint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let way = waypointName {
-            self.navigationItem.title = way
-            print(way)
+        if let waypoint = waypoint {
+            self.navigationItem.title = waypoint.name
         }
+//        if let way = waypointName {
+//            
+//            self.navigationItem.title = trip?.locationName
+//            print(way)
+//        }
 
         // Do any additional setup after loading the view.
     }
