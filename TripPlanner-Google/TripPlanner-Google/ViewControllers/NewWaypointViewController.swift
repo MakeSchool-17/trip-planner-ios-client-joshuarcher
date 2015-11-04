@@ -34,9 +34,8 @@ class NewWaypointViewController: UIViewController {
         // set location to Weed, CA
         self.location = CLLocation(latitude: 41.4242, longitude: -122.3844)
         if let location = location {
-            setMapLocation(location)
+            MapHelper.setMapLocationWithPoint(mapView, location: location, point: false)
         }
-        
         // hide initial search table view
         waypointSearchTableView.hidden = true
     }
@@ -47,12 +46,6 @@ class NewWaypointViewController: UIViewController {
     }
     
     // MARK: - Helper
-    
-    func setMapLocation(location: CLLocation) {
-        let regionRadius: CLLocationDistance = 1000
-        let coordinate = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2, regionRadius * 2)
-        mapView.setRegion(coordinate, animated: true)
-    }
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
         if let trip = trip {
@@ -74,7 +67,7 @@ extension NewWaypointViewController: UISearchBarDelegate {
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.characters.count != 0 {
             // go search for places
-            GooglePlacesHelper.getPlaces(searchText, completion: { (results) -> Void in
+            GooglePlacesHelper.getPlacesGivenSearch(searchText, completion: { (results) -> Void in
                 self.googleMapsPlaces = results
             })
         } else {
@@ -87,6 +80,22 @@ extension NewWaypointViewController: UISearchBarDelegate {
 }
 
 // MARK: - Search TableView
+
+extension NewWaypointViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.waypointSearchTableView.hidden = true
+        self.waypointSearchBar.resignFirstResponder()
+        
+        let placeSelectedID = googleMapsPlaces[indexPath.row].placeID
+        GooglePlacesHelper.getPlaceGivenID(placeSelectedID) { (place) -> Void in
+            let placeCo = place.coordinate
+            self.location = CLLocation(latitude: placeCo.latitude, longitude: placeCo.longitude)
+            MapHelper.setMapLocationWithPoint(self.mapView, location: self.location!, point: true, name: place.name)
+        }
+    }
+    
+}
 
 extension NewWaypointViewController: UITableViewDataSource {
     

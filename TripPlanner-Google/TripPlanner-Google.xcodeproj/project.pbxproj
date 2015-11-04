@@ -29,6 +29,7 @@
 		D5CBC3F21BE04BB10019D216 /* ExistingWapointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CBC3F11BE04BB10019D216 /* ExistingWapointViewController.swift */; };
 		D5F018201BE963FB00649166 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0181F1BE963FB00649166 /* CoreDataStack.swift */; };
 		D5F018231BE96C9900649166 /* GooglePlacesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F018221BE96C9900649166 /* GooglePlacesHelper.swift */; };
+		D5F018251BE9C98C00649166 /* MapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F018241BE9C98C00649166 /* MapHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D5CBC3F11BE04BB10019D216 /* ExistingWapointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingWapointViewController.swift; sourceTree = "<group>"; };
 		D5F0181F1BE963FB00649166 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D5F018221BE96C9900649166 /* GooglePlacesHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesHelper.swift; sourceTree = "<group>"; };
+		D5F018241BE9C98C00649166 /* MapHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F018221BE96C9900649166 /* GooglePlacesHelper.swift */,
+				D5F018241BE9C98C00649166 /* MapHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				D57751501BDEBC13007CE79E /* TripDetailViewController.swift in Sources */,
 				D577514B1BDEB7BA007CE79E /* TripListViewController.swift in Sources */,
 				D5CBC3F21BE04BB10019D216 /* ExistingWapointViewController.swift in Sources */,
+				D5F018251BE9C98C00649166 /* MapHelper.swift in Sources */,
 				D583CBEA1BE1B97200622BBC /* TripListTableViewCell.swift in Sources */,
 				D5886B6B1BDFF159007AEDC1 /* ContainerTripDetailViewController.swift in Sources */,
 				D577514E1BDEBB76007CE79E /* AddTripViewController.swift in Sources */,

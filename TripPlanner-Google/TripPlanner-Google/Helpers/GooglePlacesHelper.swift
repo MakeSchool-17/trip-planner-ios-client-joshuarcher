@@ -14,7 +14,7 @@ class GooglePlacesHelper {
     // single instance of the google places client
     static let googlePlacesClient = GMSPlacesClient()
     
-    static func getPlaces(searchString: String, completion: (results: [GMSAutocompletePrediction]) -> Void ) {
+    static func getPlacesGivenSearch(searchString: String, completion: (results: [GMSAutocompletePrediction]) -> Void ) {
         googlePlacesClient.autocompleteQuery(searchString, bounds: nil, filter: nil) { (results, error: NSError?) -> Void in
             if let error = error {
                 print(error.debugDescription)
@@ -26,5 +26,16 @@ class GooglePlacesHelper {
         }
     }
     
+    static func getPlaceGivenID(placeID: String, completion: (place: GMSPlace) -> Void) {
+        googlePlacesClient.lookUpPlaceID(placeID) { (result, error: NSError?) -> Void in
+            if let error = error {
+                print(error.debugDescription)
+            }
+            
+            if let placeResult = result {
+                completion(place: placeResult)
+            }
+        }
+    }
     
 }
