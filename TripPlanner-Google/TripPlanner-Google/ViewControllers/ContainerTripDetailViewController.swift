@@ -24,7 +24,7 @@ class ContainerTripDetailViewController: UIViewController {
         super.viewDidLoad()
         if let trip = trip {
             tripDestinationLabel.text = "Destination: \(trip.locationName!)"
-            self.CDWaypoints = CoreDataHelper.singleInstance.getWaypointsGivenTrip(trip)
+            self.CDWaypoints = CoreDataHelper.getWaypointsGivenTrip(trip)
         }
 
         // Do any additional setup after loading the view.
@@ -33,7 +33,7 @@ class ContainerTripDetailViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if let trip = trip {
-            self.CDWaypoints = CoreDataHelper.singleInstance.getWaypointsGivenTrip(trip)
+            self.CDWaypoints = CoreDataHelper.getWaypointsGivenTrip(trip)
             tableView.reloadData()
         }
     }

@@ -2,7 +2,7 @@
 //  Trip.swift
 //  TripPlanner-Google
 //
-//  Created by Joshua Archer on 10/28/15.
+//  Created by Joshua Archer on 11/4/15.
 //  Copyright © 2015 Joshua Archer. All rights reserved.
 //
 

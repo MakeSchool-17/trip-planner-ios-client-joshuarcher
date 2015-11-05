@@ -28,7 +28,7 @@ class AddTripViewController: UIViewController {
     @IBAction func saveButtonPressed(sender: AnyObject) {
         if tripNameTextField.text?.characters.count != 0 {
             let nameOfTrip = tripNameTextField.text
-            CoreDataHelper.singleInstance.addTrip(nameOfTrip)
+            CoreDataHelper.addTrip(nameOfTrip)
             self.navigationController?.popViewControllerAnimated(true)
         } else {
             let alert = UIAlertController(title: "Sorry!", message: "Please enter a trip name before saving :)", preferredStyle: UIAlertControllerStyle.Alert)

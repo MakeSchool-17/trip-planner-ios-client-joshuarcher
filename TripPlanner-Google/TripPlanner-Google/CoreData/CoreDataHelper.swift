@@ -8,17 +8,18 @@
 
 import Foundation
 import CoreData
+import GoogleMaps
 
 class CoreDataHelper {
     
     // create singleton for entire application
     static let singleInstance = CoreDataHelper()
     
-    let moc = CoreDataStack(stackType: .InMemory).managedObjectContext
+    static let moc = CoreDataStack(stackType: .InMemory).managedObjectContext
     
     // MARK: - Trip Resource
     
-    func addTrip(name: String?) {
+    static func addTrip(name: String?) {
         // create new instance using name of entity
         let trip: Trip = NSEntityDescription.insertNewObjectForEntityForName("Trip", inManagedObjectContext: moc) as! Trip
         trip.locationName = name
@@ -32,7 +33,7 @@ class CoreDataHelper {
         }
     }
     
-    func getTrips() -> [Trip] {
+    static func getTrips() -> [Trip] {
         let fetchRequest = NSFetchRequest(entityName: "Trip")
         
         let alphaSort = NSSortDescriptor(key: "locationName", ascending: true)
@@ -49,7 +50,7 @@ class CoreDataHelper {
         return results
     }
     
-    func addWaypoint(name: String, lat: Int, long: Int, trip: Trip) {
+    static func addWaypoint(name: String, lat: Double, long: Double, trip: Trip) {
         let waypoint: Waypoint = NSEntityDescription.insertNewObjectForEntityForName("Waypoint", inManagedObjectContext: moc) as! Waypoint
         waypoint.name = name
         waypoint.latitude = lat
@@ -65,7 +66,15 @@ class CoreDataHelper {
         }
     }
     
-    func getWaypointsGivenTrip(trip: Trip) -> [Waypoint] {
+    static func addWapointWithPlace(place: GMSPlace, trip: Trip) {
+        let wName = place.name
+        let wLat = place.coordinate.latitude
+        let wLong = place.coordinate.longitude
+        
+        self.addWaypoint(wName, lat: wLat, long: wLong, trip: trip)
+    }
+    
+    static func getWaypointsGivenTrip(trip: Trip) -> [Waypoint] {
         let fetchRequest = NSFetchRequest(entityName: "Waypoint")
         
         let predicate = NSPredicate(format: "%K == %@", "parentTrip", trip)

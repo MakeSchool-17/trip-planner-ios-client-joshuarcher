@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import MapKit
 
 class ExistingWapointViewController: UIViewController {
     
     var waypointName: String?
     var waypoint: Waypoint?
+    
+    @IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let waypoint = waypoint {
-            self.navigationItem.title = waypoint.name
-        }
-//        if let way = waypointName {
-//            
-//            self.navigationItem.title = trip?.locationName
-//            print(way)
-//        }
+        setUp()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setUp() {
+        if let waypoint = waypoint {
+            let wayName = waypoint.name
+            self.navigationItem.title = wayName
+            let lat = Double(waypoint.latitude!)
+            let long = Double(waypoint.longitude!)
+            let location = CLLocation(latitude: lat, longitude: long)
+            MapHelper.setMapLocationWithPoint(mapView, location: location, point: true, name: wayName!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

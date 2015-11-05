@@ -332,6 +332,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Y8F-0i-Knl"/>
+                    <connections>
+                        <outlet property="mapView" destination="dWb-lg-gtG" id="2vQ-c7-QsS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYp-x3-VBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

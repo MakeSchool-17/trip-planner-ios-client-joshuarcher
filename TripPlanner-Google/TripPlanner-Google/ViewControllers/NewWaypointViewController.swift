@@ -12,9 +12,10 @@ import MapKit
 
 class NewWaypointViewController: UIViewController {
     
-    var trip: Trip?
+    weak var trip: Trip?
     var location: CLLocation?
     var searchController: UISearchController?
+    weak var googlePlace: GMSPlace?
 
     @IBOutlet weak var waypointSearchBar: UISearchBar!
     @IBOutlet weak var waypointSearchTableView: UITableView!
@@ -49,9 +50,22 @@ class NewWaypointViewController: UIViewController {
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
         if let trip = trip {
-            CoreDataHelper.singleInstance.addWaypoint("joshy", lat: 100, long: 100, trip: trip)
+            if let googlePlace = googlePlace {
+                CoreDataHelper.addWapointWithPlace(googlePlace, trip: trip)
+            } else {
+                showSaveAlert()
+                return
+            }
         }
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func showSaveAlert() {
+        let alertTitle = "Hey now.."
+        let message = "Please pick a place first!"
+        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
 }
@@ -89,6 +103,7 @@ extension NewWaypointViewController: UITableViewDelegate {
         
         let placeSelectedID = googleMapsPlaces[indexPath.row].placeID
         GooglePlacesHelper.getPlaceGivenID(placeSelectedID) { (place) -> Void in
+            self.googlePlace = place
             let placeCo = place.coordinate
             self.location = CLLocation(latitude: placeCo.latitude, longitude: placeCo.longitude)
             MapHelper.setMapLocationWithPoint(self.mapView, location: self.location!, point: true, name: place.name)

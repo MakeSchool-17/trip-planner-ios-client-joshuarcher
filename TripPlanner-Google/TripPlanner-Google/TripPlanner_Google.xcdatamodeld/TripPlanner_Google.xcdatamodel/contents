@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15B42" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="JAcob" representedClassName=".JAcob" syncable="YES">
+        <attribute name="hi" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <entity name="SyncInformation" representedClassName="SyncInformation" syncable="YES">
         <attribute name="lastSyncTimestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="unsyncedDeletedTrips" optional="YES" attributeType="Transformable" syncable="YES"/>
@@ -13,16 +16,17 @@
         <relationship name="waypoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="parentTrip" inverseEntity="Waypoint" syncable="YES"/>
     </entity>
     <entity name="Waypoint" representedClassName="Waypoint" syncable="YES">
-        <attribute name="latitude" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="longitude" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="parsing" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="serverID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="parentTrip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="waypoints" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Trip" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Waypoint" positionX="-54" positionY="27" width="128" height="135"/>
         <element name="SyncInformation" positionX="-36" positionY="63" width="128" height="75"/>
+        <element name="Trip" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Waypoint" positionX="-54" positionY="27" width="128" height="133"/>
+        <element name="JAcob" positionX="-45" positionY="63" width="128" height="58"/>
     </elements>
 </model>
