@@ -22,5 +22,4 @@ class MapHelper {
             map.addAnnotation(pointPin)
         }
     }
-    
 }

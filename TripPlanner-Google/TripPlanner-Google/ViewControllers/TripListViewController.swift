@@ -23,7 +23,7 @@ class TripListViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+        //super.viewWillAppear(animated)
         self.trips = CoreDataHelper.getTrips()
         tableView.reloadData()
     }

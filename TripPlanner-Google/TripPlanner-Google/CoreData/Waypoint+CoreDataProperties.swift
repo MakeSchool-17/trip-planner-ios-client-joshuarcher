@@ -1,8 +1,8 @@
 //
-//  Trip+CoreDataProperties.swift
+//  Waypoint+CoreDataProperties.swift
 //  TripPlanner-Google
 //
-//  Created by Joshua Archer on 11/4/15.
+//  Created by Joshua Archer on 11/5/15.
 //  Copyright © 2015 Joshua Archer. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,13 +12,13 @@
 import Foundation
 import CoreData
 
-extension Trip {
+extension Waypoint {
 
-    @NSManaged var lastUpdate: NSNumber?
-    @NSManaged var locationDescription: String?
-    @NSManaged var locationName: String?
-    @NSManaged var parsing: NSNumber?
+    @NSManaged var latitude: NSNumber?
+    @NSManaged var longitude: NSNumber?
+    @NSManaged var name: String?
     @NSManaged var serverID: String?
-    @NSManaged var waypoints: NSSet?
+    @NSManaged var lastUpdate: NSDate?
+    @NSManaged var parentTrip: Trip?
 
 }

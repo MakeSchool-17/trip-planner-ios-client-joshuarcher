@@ -36,7 +36,7 @@ class CoreDataHelper {
     static func getTrips() -> [Trip] {
         let fetchRequest = NSFetchRequest(entityName: "Trip")
         
-        let alphaSort = NSSortDescriptor(key: "locationName", ascending: true)
+        let alphaSort = NSSortDescriptor(key: "locationName", ascending: true, selector: "localizedCaseInsensitiveCompare:")
         fetchRequest.sortDescriptors = [alphaSort]
         
         var results = [Trip]()
@@ -79,6 +79,9 @@ class CoreDataHelper {
         
         let predicate = NSPredicate(format: "%K == %@", "parentTrip", trip)
         fetchRequest.predicate = predicate
+        
+        let alphaSort = NSSortDescriptor(key: "name", ascending: true, selector: "localizedCaseInsensitiveCompare:")
+        fetchRequest.sortDescriptors = [alphaSort]
         
         var results = [Waypoint]()
         

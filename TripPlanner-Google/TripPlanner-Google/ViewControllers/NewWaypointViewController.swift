@@ -15,7 +15,7 @@ class NewWaypointViewController: UIViewController {
     weak var trip: Trip?
     var location: CLLocation?
     var searchController: UISearchController?
-    weak var googlePlace: GMSPlace?
+    var googlePlace: GMSPlace?
 
     @IBOutlet weak var waypointSearchBar: UISearchBar!
     @IBOutlet weak var waypointSearchTableView: UITableView!
@@ -98,10 +98,13 @@ extension NewWaypointViewController: UISearchBarDelegate {
 extension NewWaypointViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let placeSelectedID = googleMapsPlaces[indexPath.row].placeID
+        
+        // hide table view and resign search bar
         self.waypointSearchTableView.hidden = true
         self.waypointSearchBar.resignFirstResponder()
         
-        let placeSelectedID = googleMapsPlaces[indexPath.row].placeID
+        // get place and show on map
         GooglePlacesHelper.getPlaceGivenID(placeSelectedID) { (place) -> Void in
             self.googlePlace = place
             let placeCo = place.coordinate

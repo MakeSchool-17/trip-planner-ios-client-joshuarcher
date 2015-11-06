@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'TripPlanner-Google' do
   pod 'GoogleMaps'
-
+  pod 'SwiftyJSON'
+  pod 'Gloss'
 end
 
 target 'TripPlanner-GoogleTests' do

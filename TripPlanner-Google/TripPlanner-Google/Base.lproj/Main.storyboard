@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s04-ME-bHs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="euI-EY-UdF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -190,6 +190,71 @@
                 <exit id="d2I-KJ-dOV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2014" y="429"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="a3m-mH-day">
+            <objects>
+                <viewController id="euI-EY-UdF" customClass="LoginViewController" customModule="TripPlanner_Google" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9VS-XA-uVO"/>
+                        <viewControllerLayoutGuide type="bottom" id="c3c-MR-ELa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="49s-Iw-Qi1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAw-pF-dJI">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-qr-NxE">
+                                <rect key="frame" x="20" y="78" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2s-yo-Hpz">
+                                <rect key="frame" x="281" y="128" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="euI-EY-UdF" eventType="touchUpInside" id="yUd-gv-U8K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q3-Eb-TZR">
+                                <rect key="frame" x="285" y="166" width="31" height="30"/>
+                                <animations/>
+                                <state key="normal" title="post"/>
+                                <connections>
+                                    <action selector="postButtonTapped:" destination="euI-EY-UdF" eventType="touchUpInside" id="U72-ts-hXd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VAw-pF-dJI" firstAttribute="top" secondItem="9VS-XA-uVO" secondAttribute="bottom" constant="8" id="0IT-Az-OBF"/>
+                            <constraint firstItem="6q3-Eb-TZR" firstAttribute="top" secondItem="B2s-yo-Hpz" secondAttribute="bottom" constant="10" id="58L-2d-BDa"/>
+                            <constraint firstItem="B2s-yo-Hpz" firstAttribute="centerX" secondItem="49s-Iw-Qi1" secondAttribute="centerX" id="6ri-83-2t9"/>
+                            <constraint firstItem="B2s-yo-Hpz" firstAttribute="top" secondItem="gJj-qr-NxE" secondAttribute="bottom" constant="20" id="EvZ-CV-xsq"/>
+                            <constraint firstItem="gJj-qr-NxE" firstAttribute="top" secondItem="VAw-pF-dJI" secondAttribute="bottom" constant="20" id="XK8-iy-hF5"/>
+                            <constraint firstItem="VAw-pF-dJI" firstAttribute="trailing" secondItem="49s-Iw-Qi1" secondAttribute="trailingMargin" id="ZKD-Jb-W5H"/>
+                            <constraint firstItem="gJj-qr-NxE" firstAttribute="trailing" secondItem="49s-Iw-Qi1" secondAttribute="trailingMargin" id="a51-0b-urp"/>
+                            <constraint firstItem="VAw-pF-dJI" firstAttribute="leading" secondItem="49s-Iw-Qi1" secondAttribute="leadingMargin" id="bqZ-gM-LcV"/>
+                            <constraint firstItem="6q3-Eb-TZR" firstAttribute="centerX" secondItem="49s-Iw-Qi1" secondAttribute="centerX" id="gZ7-mX-dr8"/>
+                            <constraint firstItem="gJj-qr-NxE" firstAttribute="leading" secondItem="49s-Iw-Qi1" secondAttribute="leadingMargin" id="mGR-Jt-YDh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="gJj-qr-NxE" id="fkG-Uk-gQu"/>
+                        <outlet property="usernameTextField" destination="VAw-pF-dJI" id="9Pw-31-9jL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEU-Uk-NEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sqc-44-pn9">
